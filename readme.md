@@ -6,7 +6,7 @@ check that all switch statements have a default case.
 
 ## why
 
-in some cases, a missing default is always an error.
+sometimes a missing default is an error.
 
 ## install
 
