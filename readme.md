@@ -2,7 +2,7 @@
 
 ## what
 
-check that all switch statements have a default case.
+a go linter to check that all switch statements have a default case.
 
 ## why
 
