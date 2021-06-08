@@ -50,7 +50,7 @@ func main() {
 			if len(switchesWithoutDefault) != 0 {
 				fail = true
 				for _, lineNum := range switchesWithoutDefault {
-					fmt.Println(filePath+":"+fmt.Sprint(lineNum), strings.Trim(lines[lineNum], "\t"))
+					fmt.Println(filePath+":"+fmt.Sprint(lineNum) + ": switch statement missing default case")
 				}
 			}
 		}
