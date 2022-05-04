@@ -10,31 +10,14 @@ sometimes a missing default is an error.
 
 ## install
 
-`go get github.com/nathants/go-hasdefault`
+`go install github.com/nathants/go-hasdefault@latest`
 
 ## usage
 
 ```bash
->> cat bad.go
-package bad
+>> go-hasdefault $(find test/good/ -name '*.go')
 
-func bad() {
-        switch "" {
-        }
-}
-
->> go-hasdefault bad.go
-bad.go:3 switch "" {
-
->> cat good.go
-package good
-
-func good() {
-        switch "" {
-        default:
-        }
-}
-
-0>> go-hasdefault good.go
+>> go-hasdefault $(find test/bad/ -name '*.go')
+test/bad/bad.go:3: switch statement missing default case
 
 ```

@@ -8,16 +8,14 @@ import (
 	"strings"
 )
 
-// TODO use ast instead of strings
+// TODO is it worth using ast instead of strings, even with go fmt regularity?
 
 func main() {
-
 	if len(os.Args) == 1 || (len(os.Args) > 1 && (os.Args[0] == "-h" || os.Args[0] == "--help" || os.Args[0] == "help")) {
 		fmt.Println("\nlinter to check that all switch statements have a default case")
 		fmt.Println("\nusage: go-hasdefault $(find -type f -name '*.go')")
 		os.Exit(1)
 	}
-
 	fail := false
 	for _, filePath := range os.Args {
 		if strings.HasSuffix(filePath, ".go") {
@@ -50,7 +48,7 @@ func main() {
 			if len(switchesWithoutDefault) != 0 {
 				fail = true
 				for _, lineNum := range switchesWithoutDefault {
-					fmt.Println(filePath+":"+fmt.Sprint(lineNum) + ": switch statement missing default case")
+					fmt.Println(filePath + ":" + fmt.Sprint(lineNum) + ": switch statement missing default case")
 				}
 			}
 		}
