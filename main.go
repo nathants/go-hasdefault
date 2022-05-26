@@ -43,6 +43,7 @@ func main() {
 					switchesWithoutDefault[indentLevel] = lineNum
 				case "default:":
 					delete(switchesWithoutDefault, indentLevel)
+				default:
 				}
 			}
 			if len(switchesWithoutDefault) != 0 {
