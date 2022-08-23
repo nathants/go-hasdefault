@@ -21,3 +21,4 @@ sometimes a missing default is an error.
 test/bad/bad.go:3: switch statement missing default case
 
 ```
+
