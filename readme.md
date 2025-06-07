@@ -1,18 +1,18 @@
 # go-hasdefault
 
-## what
+## What
 
-a go linter to check that all switch statements have a default case.
+A go linter to check that all switch statements have a default case.
 
-## why
+## Why
 
-sometimes a missing default is an error.
+Sometimes a missing default is an error.
 
-## install
+## Install
 
 `go install github.com/nathants/go-hasdefault@latest`
 
-## usage
+## Usage
 
 ```bash
 >> go-hasdefault $(find test/good/ -name '*.go')
